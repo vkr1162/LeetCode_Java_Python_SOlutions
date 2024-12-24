@@ -1,19 +1,19 @@
-class Solution {
-    public String mergeAlternately(String word1, String word2) {
-       String ans = "";
-        int len = word1.length() + word2.length();
-        int x = 0;
-        int y = 0;
-        for(int i=0;i<len;i++){
-            if(x<word1.length()){
-            ans = ans+word1.charAt(x);
-                x++;
-            }
-            if(y<word2.length()){
-                ans=ans+word2.charAt(y);
-                y++;
-            }
-        }
-        return ans;
-    }
-}
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: str
+        """
+        length = len(word1) + len(word2)
+        x = 0
+        y = 0
+        ans = ""
+        for i in range(length):
+            if(x<len(word1)):
+                ans = ans + word1[i]
+                x+=1
+            if(y<len(word2)):
+                ans = ans + word2[i]
+                y+=1
+        return ans
