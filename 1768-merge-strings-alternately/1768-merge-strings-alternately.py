@@ -5,15 +5,16 @@ class Solution(object):
         :type word2: str
         :rtype: str
         """
-        length = len(word1) + len(word2)
+        ans = ""
         x = 0
         y = 0
-        ans = ""
-        for i in range(length):
-            if(x<len(word1)):
-                ans = ans + word1[i]
+        l1 = len(word1)
+        l2 = len(word2)
+        for i in range(max(l1,l2)):
+            if(x<l1):
+                ans = ans + word1[x]
                 x+=1
-            if(y<len(word2)):
-                ans = ans + word2[i]
+            if(y<l2):
+                ans = ans + word2[y]
                 y+=1
         return ans
